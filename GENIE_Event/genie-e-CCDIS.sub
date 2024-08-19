@@ -1,0 +1,17 @@
+executable = /afs/cern.ch/user/your user name/Genie-e-CCDIS.sh
+arguments = $(ClusterId) $(ProcId)
+
+should_transfer_files = YES
+
+output = /afs/cern.ch/work/your user name/ directory name/D-nu_e_CCDIS-$(ClusterId).$(ProcId).out
+error  = /afs/cern.ch/work/your user name/ directory name/D-nu_e_CCDIS-$(ClusterId).$(ProcId).err
+log    = /afs/cern.ch/work/your user name/ directory name/D-nu_e_CCDIS-$(ClusterId).$(ProcId).log
+
+requirements= (CERNEnvironment =!= "qa")
++JobFlavour = "testmatch"
+
+request_cpus = 1
+request_disk = 100MB
+request_memory = 500MB
+
+queue 125
